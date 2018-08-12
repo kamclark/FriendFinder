@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Friend Finder</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Friend Finder Survey</h1>
+      <h4>Use survey to determine a match.....</h4> <br>
+
+      <a href="/add">
+        <button class="btn btn-danger btn-md">
+          <span class="fa fa-plus"></span> Add New Character</button>
+      </a>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+            </h3>
+          </div>
+
+          <form method="POST">
+            <div class="panel-body">
+
+              <label id="name">Name</label>
+              <input type="text" id="name" class="form-control">
+              <br>
+              <label id="name">Photo</label>
+              <input type="text" id="photo" class="form-control">
+              <br>
+              <label id="name">Email</label>
+              <input type="text" id="email" class="form-control">
+              <br>
+
+              <div class="form-group">
+                <hr>
+
+                <h4>Question #1</h4>
+                <h5>When you have small differences, it makes them cute.</h5>
+                <select class="chosen-select" id="q1">
+                  <option value=""></option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Neutral)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <h4>Question #2</h4>
+                <h5>You are a party animal.</h5>
+                <select class="chosen-select" id="q1">
+                  <option value=""></option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Neutral)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <h4>Question #3</h4>
+                <h5>You enjoy clubbing/nightlife.</h5>
+                <select class="chosen-select" id="q1">
+                  <option value=""></option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Neutral)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <h4>Question #4</h4>
+                <h5>You are a fan of long distance relationships.</h5>
+                <select class="chosen-select" id="q1">
+                  <option value=""></option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Neutral)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <h4>Question #5</h4>
+                <h5>You would rather read a book than watch a movie.</h5>
+                <select class="chosen-select" id="q1">
+                  <option value=""></option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Neutral)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <h4>Question #6</h4>
+                <h5>You are a party animal.</h5>
+                <select class="chosen-select" id="q1">
+                  <option value=""></option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Neutral)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <h4>Question #7</h4>
+                <h5>You enjoy Game of Thrones.</h5>
+                <select class="chosen-select" id="q1">
+                  <option value=""></option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Neutral)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <h4>Question #8</h4>
+                <h5>You are not a morning person.</h5>
+                <select class="chosen-select" id="q1">
+                  <option value=""></option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Neutral)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <h4>Question #9</h4>
+                <h5>Sometimes lies are a necessary evil.</h5>
+                <select class="chosen-select" id="q1">
+                  <option value=""></option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Neutral)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <h4>Question #10</h4>
+                <h5>You enjoy object oriented programming.</h5>
+                <select class="chosen-select" id="q1">
+                  <option value=""></option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Neutral)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+          </form>
+          </div>
+          </div>
+        </div>
+
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-md btn-secondary" id="submit">
+          Submit</button>
+
+        <hr>
+        <footer class="footer">
+          <div class="container">
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script type="text/javascript">
+    var config = {
+      ".chosen-select": {},
+      ".chosen-select-deselect": {
+        allow_single_deselect: true
+      },
+      ".chosen-select-no-single": {
+        disable_search_threshold: 5
+      },
+      ".chosen-select-no-results": {
+        no_results_text: "Nothing found."
+      }
+    };
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+      function validateForm() {
+        var isValid = true;
+        $(".form-control").each(function() {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        $(".chosen-select").each(function() {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }
+      if (validateForm()) {
+        var userData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
+        };
+        // Post data from form to Friends API to get match
+        $.post("/api/friends", userData, function(data) {
+          // best match is displayed
+          $("#match-img").attr("src", data.photo);
+          $("#match-name").text(data.name);
+          $("#results-modal").modal("toggle");
+        });
+      } else {
+        alert("Fill out all forms.");
+      }
+    });
+  </script>
+</body>
+
+</html>
