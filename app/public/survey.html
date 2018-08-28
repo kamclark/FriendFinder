@@ -1,240 +1,237 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Friend Finder</title>
+  <meta charset="UTF-8">
+  <title>Seinfeld Matchmaker</title>
+  <!-- Latest jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
   <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+  <!-- jQuery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+  <!-- Chosen for survey cleaner selection  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+  <!-- my CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/style.css" />
+
+  <!-- icon for the tab -->
+  <link rel="icon" type="image/png" href="https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/heart-512.png" />
 </head>
 
 <body>
-  <div class="container">
-    <div class="jumbotron">
-      <h1>Friend Finder Survey</h1>
-      <h4>Use survey to determine a match.....</h4> <br>
 
-      <a href="/add">
-        <button class="btn btn-danger btn-md">
-          <span class="fa fa-plus"></span> Add New Character</button>
-      </a>
+  <div class="container-fluid" id="maincontainer">
+
+    <div class="input-field">
+      <h4>Name (Required)</h4>
+      <input type="text" class="validate" placeholder="Your Name Here" id="name">
     </div>
-    <div class="row">
-
-      <div class="col-lg-12">
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
-            </h3>
-          </div>
-
-          <form method="POST">
-            <div class="panel-body">
-
-              <label id="name">Name</label>
-              <input type="text" id="name" class="form-control">
-              <br>
-              <label id="name">Photo</label>
-              <input type="text" id="photo" class="form-control">
-              <br>
-              <label id="name">Email</label>
-              <input type="text" id="email" class="form-control">
-              <br>
-
-              <div class="form-group">
-                <hr>
-
-                <h4>Question #1</h4>
-                <h5>When you have small differences, it makes them cute.</h5>
-                <select class="chosen-select" id="q1">
-                  <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Neutral)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-
-                <h4>Question #2</h4>
-                <h5>You are a party animal.</h5>
-                <select class="chosen-select" id="q1">
-                  <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Neutral)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-
-                <h4>Question #3</h4>
-                <h5>You enjoy clubbing/nightlife.</h5>
-                <select class="chosen-select" id="q1">
-                  <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Neutral)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-
-                <h4>Question #4</h4>
-                <h5>You are a fan of long distance relationships.</h5>
-                <select class="chosen-select" id="q1">
-                  <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Neutral)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-
-                <h4>Question #5</h4>
-                <h5>You would rather read a book than watch a movie.</h5>
-                <select class="chosen-select" id="q1">
-                  <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Neutral)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-
-                <h4>Question #6</h4>
-                <h5>You are a party animal.</h5>
-                <select class="chosen-select" id="q1">
-                  <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Neutral)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-
-                <h4>Question #7</h4>
-                <h5>You enjoy Game of Thrones.</h5>
-                <select class="chosen-select" id="q1">
-                  <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Neutral)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-
-                <h4>Question #8</h4>
-                <h5>You are not a morning person.</h5>
-                <select class="chosen-select" id="q1">
-                  <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Neutral)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-
-                <h4>Question #9</h4>
-                <h5>Sometimes lies are a necessary evil.</h5>
-                <select class="chosen-select" id="q1">
-                  <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Neutral)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-
-                <h4>Question #10</h4>
-                <h5>You enjoy object oriented programming.</h5>
-                <select class="chosen-select" id="q1">
-                  <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Neutral)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                </select>
-          </form>
-          </div>
-          </div>
-        </div>
 
 
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary btn-md btn-secondary" id="submit">
-          Submit</button>
+    <div class="input-field">
+      <h4>Email Address (Required)</h4>
+      <input type="text" class="validate" placeholder="Email" id="email">
+    </div>
 
-        <hr>
-        <footer class="footer">
-          <div class="container">
-          </div>
-        </footer>
+    <div class="input-field">
+      <h4>Your Image Path</h4>
+      <input type="text" class="" placeholder="Photo Here" id="photo">
+    </div>
 
+    <div class="form-group">
+      <hr>
+
+      <h4>Question #1</h4>
+      <h5>Do you believe in "shrinkage"?</h5>
+      <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3 (Neutral)</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+      <h4>Question #2</h4>
+      <h5>Are you a fan of the New York Yankees?</h5>
+      <select class="chosen-select" id="q2">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3 (Neutral)</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+      <h4>Question #3</h4>
+      <h5>Festivus is a great holiday.</h5>
+      <select class="chosen-select" id="q3">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3 (Neutral)</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+      <h4>Question #4</h4>
+      <h5>You were not told to put the balm on.</h5>
+      <select class="chosen-select" id="q4">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3 (Neutral)</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+      <h4>Question #5</h4>
+      <h5>In the event of a fire you would save the elderly and children first.</h5>
+      <select class="chosen-select" id="q5">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3 (Neutral)</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+      <h4>Question #6</h4>
+      <h5>You gotta love that bobka.....</h5>
+      <select class="chosen-select" id="q6">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3 (Neutral)</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+      <h4>Question #7</h4>
+      <h5>Overdue library books is a serious offense.</h5>
+      <select class="chosen-select" id="q7">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3 (Neutral)</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+      <h4>Question #8</h4>
+      <h5>You frequent trashcans for potential used wristwatches.</h5>
+      <select class="chosen-select" id="q8">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3 (Neutral)</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+      <h4>Question #9</h4>
+      <h5>It's pretty obnoxious to own a pony growing up.</h5>
+      <select class="chosen-select" id="q9">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3 (Neutral)</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+      <h4>Question #10</h4>
+      <h5>A book about coffee tables isn't such a bad idea.</h5>
+      <select class="chosen-select" id="q10">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3 (Neutral)</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    </div>
+
+
+    <!-- Submit Button -->
+    <br><br>
+    <button type="submit" class="btn btn-info btn-lg btn-block" id="submit">Submit</button>
+    <br>
+    <footer class="footer">
+      <div class="container-fluid">
+        <p>
+          |<a href="https://github.com/kamclark" target="_blank"> GitHub</a> |
+        </p>
       </div>
-    </div>
+    </footer>
+
   </div>
+
+  <!-- Modal Dialog Displaying Closest Friend Match -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h4>Your Seinfeld Match</h4>
+      <hr>
+      <h5 id="dateMatch"></h5>
+      <img id="dateMatchImage" class="materialboxed" width="650" src="">
+    </div>
+    <div class="modal-footer">
+      <a href="/survey" class="modal-action modal-close btn-flat">Take Again</a>
+    </div>
   </div>
 
   <script type="text/javascript">
-    var config = {
-      ".chosen-select": {},
-      ".chosen-select-deselect": {
-        allow_single_deselect: true
-      },
-      ".chosen-select-no-single": {
-        disable_search_threshold: 5
-      },
-      ".chosen-select-no-results": {
-        no_results_text: "Nothing found."
-      }
-    };
-    for (var selector in config) {
-      $(selector).chosen(config[selector]);
-    }
-    $("#submit").on("click", function(event) {
-      event.preventDefault();
-      function validateForm() {
-        var isValid = true;
-        $(".form-control").each(function() {
-          if ($(this).val() === "") {
-            isValid = false;
-          }
-        });
-        $(".chosen-select").each(function() {
-          if ($(this).val() === "") {
-            isValid = false;
-          }
-        });
-        return isValid;
-      }
-      if (validateForm()) {
-        var userData = {
-          name: $("#name").val(),
-          photo: $("#photo").val(),
-          scores: [
-            $("#q1").val(),
-            $("#q2").val(),
-            $("#q3").val(),
-            $("#q4").val(),
-            $("#q5").val(),
-            $("#q6").val(),
-            $("#q7").val(),
-            $("#q8").val(),
-            $("#q9").val(),
-            $("#q10").val()
-          ]
-        };
-        // Post data from form to Friends API to get match
-        $.post("/api/friends", userData, function(data) {
-          // best match is displayed
-          $("#match-img").attr("src", data.photo);
-          $("#match-name").text(data.name);
-          $("#results-modal").modal("toggle");
-        });
-      } else {
-        alert("Fill out all forms.");
-      }
+    $(document).ready(function() {
+      $('select').material_select();
+      $('.modal').modal({
+        dismissible: false, // Modal can be dismissed by clicking outside of the modal
+        opacity: .5, // Opacity of modal background
+        inDuration: 300, // Transition in duration
+        outDuration: 200, // Transition out duration
+        startingTop: '4%', // Starting top style attribute
+        endingTop: '10%' // Ending top style attribute
+      });
+    });
+
+    $("#submit").on("click", function() {
+      var userdata = {
+        name: $('#name').val(),
+        photo: $('#photo').val(),
+        scores: [
+          $('#q1').val(),
+          $('#q2').val(),
+          $('#q3').val(),
+          $('#q4').val(),
+          $('#q5').val(),
+          $('#q6').val(),
+          $('#q7').val(),
+          $('#q8').val(),
+          $('#q9').val(),
+          $('#q10').val(),
+        ]
+      };
+
+      // get current website url
+      var currentURL = window.location.origin;
+
+      // AJAX post to friends data api
+      $.post(currentURL + "/api/friends", userdata, function(data) {
+        alert("working!");
+        $('#dateMatch').html(data.name);
+        console.log(data.name);
+        $("dateMatchImage").attr("src", data.photo);
+
+        $('#modal').modal('open');
+      });
     });
   </script>
 </body>

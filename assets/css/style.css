@@ -1,0 +1,35 @@
+body {
+  width: 90%;
+  margin: auto;
+  background-color: rgb(131, 121, 121)
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Slab', serif;
+}
+#contentcontainer {
+  position: relative
+}
+
+.jumbotron {
+  margin: 0;
+  width: 90%;
+  height: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.jumbotron h1 {
+  color:yellow;
+}
+
+.jumbotron h4 {
+  color:red;
+}
+
+.jumbotron p {
+  color:white;
+}
