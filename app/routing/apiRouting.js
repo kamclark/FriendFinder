@@ -27,12 +27,12 @@ module.exports = function(app) {
     var userData = req.body;
     var userScores = userData.scores;
 
-    console.log(userScores);
+    // console.log(userScores);
 
     var matchDifference = 0;
 
     for (var i = 0; i < friendsData.length; i++) {
-      console.log(friendsData[i]);
+      //console.log(friendsData[i]);
       matchDifference = 0;
 
       for (var h = 0; h < friendsData[i].scores[h]; h++) {
@@ -51,7 +51,8 @@ module.exports = function(app) {
     friendsData.push(userData);
 
     res.json(dateMatch);
-    console.log(dateMatch.name);
+    console.log(req.body);
+    console.log(friendsData[11]);
   })
 
 
